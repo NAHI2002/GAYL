@@ -1,7 +1,5 @@
 class Gishatich extends mayrakan {
 
-
-
     move() {
         var emptyCord = this.getDirections(0);
         var cord = random(emptyCord);
@@ -56,7 +54,7 @@ class Gishatich extends mayrakan {
         } else {
             this.move();
             this.energy--;
-            if (this.energy < 10) {
+            if (this.energy < 0) {
                 this.die();
                 //this.energy = 10;
             }

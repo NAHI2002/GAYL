@@ -1,6 +1,6 @@
 //խոտակերի կլասը
 class Eatgrass extends mayrakan {
-
+  //
     move() {
         var emptyCord = this.getDirections(0);
         var cord = random(emptyCord);
