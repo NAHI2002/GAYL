@@ -2,71 +2,71 @@ var matrix = []
 var side = 40;
 var xotArr = [];
 var eatArr = [];
-var erk =100;
-var bar=50;
-var xotCount=100;
-var eatCount=65;
-var gishatCount =35;
-var gishatCount2 =30;
-var gishatCount3=20;
-var gishatArr=[];
-var gishat2Arr=[];
-var gishat3Arr=[];
+var erk = 100;
+var bar = 50;
+var xotCount = 100;
+var eatCount = 65;
+var gishatCount = 35;
+var gishatCount2 = 30;
+var gishatCount3 = 20;
+var gishatArr = [];
+var gishat2Arr = [];
+var gishat3Arr = [];
 
 
 
 
 function setup() {
-    for(var i = 0; i<erk;i++){
+    for (var i = 0; i < erk; i++) {
         matrix.push([]);
-        for(var j =0;j<bar; j++){
-            matrix[i][j]=0;
+        for (var j = 0; j < bar; j++) {
+            matrix[i][j] = 0;
         }
     }
 
-    var c =0;
-    while(c<xotCount){
-        var x = Math.floor(random(0,erk));
-        var y = Math.floor(random(0,bar));
-        if(matrix[x][y]==0){
-            matrix[x][y]=1;
+    var c = 0;
+    while (c < xotCount) {
+        var x = Math.floor(random(0, erk));
+        var y = Math.floor(random(0, bar));
+        if (matrix[x][y] == 0) {
+            matrix[x][y] = 1;
             c++;
         }
     }
 
-    var c=0;
-    while(c<eatCount){
-        var x = Math.floor(random(0,erk));
-        var y = Math.floor(random(0,bar));
-        if(matrix[x][y]==0){
-            matrix[x][y]=2;
+    var c = 0;
+    while (c < eatCount) {
+        var x = Math.floor(random(0, erk));
+        var y = Math.floor(random(0, bar));
+        if (matrix[x][y] == 0) {
+            matrix[x][y] = 2;
             c++;
         }
     }
-        var c=0;
-    while(c<gishatCount){
-        var x = Math.floor(random(0,erk));
-        var y = Math.floor(random(0,bar));
-        if(matrix[x][y]==0){
-            matrix[x][y]=3;
+    var c = 0;
+    while (c < gishatCount) {
+        var x = Math.floor(random(0, erk));
+        var y = Math.floor(random(0, bar));
+        if (matrix[x][y] == 0) {
+            matrix[x][y] = 3;
             c++;
         }
     }
-        var c=0;
-    while(c<gishatCount2){
-        var x = Math.floor(random(0,erk));
-        var y = Math.floor(random(0,bar));
-        if(matrix[x][y]==0){
-            matrix[x][y]=4;
+    var c = 0;
+    while (c < gishatCount2) {
+        var x = Math.floor(random(0, erk));
+        var y = Math.floor(random(0, bar));
+        if (matrix[x][y] == 0) {
+            matrix[x][y] = 4;
             c++;
         }
     }
-        var c=0;
-    while(c<gishatCount3){
-        var x = Math.floor(random(0,erk));
-        var y = Math.floor(random(0,bar));
-        if(matrix[x][y]==0){
-            matrix[x][y]=5;
+    var c = 0;
+    while (c < gishatCount3) {
+        var x = Math.floor(random(0, erk));
+        var y = Math.floor(random(0, bar));
+        if (matrix[x][y] == 0) {
+            matrix[x][y] = 5;
             c++;
         }
     }
@@ -106,18 +106,18 @@ function setup() {
 
 function draw() {
 
-     
+
     background('#acacac');
     for (var i = 0; i < matrix.length; i++) {
         for (var j = 0; j < matrix[i].length; j++) {
             if (matrix[i][j] == 1) {
                 fill("green");
                 rect(j * side, i * side, side, side);
-            } 
+            }
             else if (matrix[i][j] == 2) {
                 fill("orange");
                 rect(j * side, i * side, side, side);
-            } 
+            }
             else if (matrix[i][j] == 0) {
                 fill('#acacac');
                 rect(j * side, i * side, side, side);
@@ -127,12 +127,12 @@ function draw() {
                 fill("red");
                 rect(j * side, i * side, side, side);
             }
-             else if (matrix[i][j] == 4) {
-                fill(200,100,56);
+            else if (matrix[i][j] == 4) {
+                fill(200, 100, 56);
                 rect(j * side, i * side, side, side);
             }
-             else if (matrix[i][j] == 5) {
-                fill(20,63,56);
+            else if (matrix[i][j] == 5) {
+                fill(20, 63, 56);
                 rect(j * side, i * side, side, side);
             }
         }
