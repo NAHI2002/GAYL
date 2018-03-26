@@ -1,6 +1,6 @@
 //գիշատիչ 3
 class Gishatich3 extends mayrakan {
-
+//purple
     move() {
         var emptyCord = this.getDirections(0);
         var cord = random(emptyCord);
@@ -42,7 +42,7 @@ class Gishatich3 extends mayrakan {
 
 
             for (var i in gishat3Arr) {
-                if (x == gishat2Arr[i].x && y == gishat3Arr[i].y) {
+                if (x == gishat2Arr[i] && y == gishat3Arr[i].y) {
                     gishat3Arr.splice(i, 1);
                 }
             }

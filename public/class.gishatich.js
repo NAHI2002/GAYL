@@ -1,5 +1,5 @@
 class Gishatich extends mayrakan {
-
+//yellow
     move() {
         var emptyCord = this.getDirections(0);
         var cord = random(emptyCord);

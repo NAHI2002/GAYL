@@ -124,15 +124,15 @@ function draw() {
             }
 
             else if (matrix[i][j] == 3) {
-                fill("red");
+                fill("yellow");
                 rect(j * side, i * side, side, side);
             }
             else if (matrix[i][j] == 4) {
-                fill(200, 100, 56);
+                fill("red");
                 rect(j * side, i * side, side, side);
             }
             else if (matrix[i][j] == 5) {
-                fill(20, 63, 56);
+                fill("purple");
                 rect(j * side, i * side, side, side);
             }
         }
