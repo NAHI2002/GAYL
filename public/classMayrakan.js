@@ -39,7 +39,15 @@ class mayrakan {
 
 
     eat() {
-        var emptyCord = this.getDirections(1);
+       if(this.index == 2){
+            var emptyCord = this.getDirections(1);
+        }else if(this.index == 3){
+            var emptyCord = this.getDirections(2)
+        }else if(this.index == 4){
+            var emptyCord = this.getDirections(3)
+        }
+       
+        
 
         var cord = random(emptyCord);
 
