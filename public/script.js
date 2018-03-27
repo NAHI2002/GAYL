@@ -158,4 +158,146 @@ function draw() {
     for (var i in gishat3Arr) {
         gishat3Arr[i].eat();
     }
+    function weather() {
+        if (frameCount % 55 >= 0 && frameCount % 55 < 15) {
+            console.log("spring")
+
+            for (var i = 0; i < matrix.length; i++) {
+                for (var j = 0; j < matrix[i].length; j++) {
+                    if (matrix[i][j] == 1) {
+                        fill("spring");
+                        rect(j * side, i * side, side, side);
+                    } else if (matrix[i][j] == 2) {
+                        fill("orange");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 3) {
+                        fill("red");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 4) {
+                        fill("DIMGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 5) {
+                        fill("DARKSLATEGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 6) {
+                        fill("#690505");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 0) {
+                        fill('#acacac');
+                        rect(j * side, i * side, side, side);
+                    }
+                }
+            }
+        }
+        else if (frameCount % 55 >= 15 && frameCount % 55 < 25) {
+            console.log("summer")
+            for (var i = 0; i < matrix.length; i++) {
+                for (var j = 0; j < matrix[i].length; j++) {
+                    if (matrix[i][j] == 1) {
+                        fill("Chartreuse");
+                        rect(j * side, i * side, side, side);
+                    } else if (matrix[i][j] == 2) {
+                        fill("orange");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 3) {
+                        fill("red");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 4) {
+                        fill("DIMGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 5) {
+                        fill("DARKSLATEGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 6) {
+                        fill("#690505");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 0) {
+                        fill('#acacac');
+                        rect(j * side, i * side, side, side);
+                    }
+                }
+            }
+        }
+        else if (frameCount % 55 >= 25 && frameCount % 55 < 35) {
+            console.log("autumn")
+
+            for (var i = 0; i < matrix.length; i++) {
+                for (var j = 0; j < matrix[i].length; j++) {
+                    if (matrix[i][j] == 1) {
+                        fill("DarkGoldenRod");
+                        rect(j * side, i * side, side, side);
+                    } else if (matrix[i][j] == 2) {
+                        fill("orange");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 3) {
+                        fill("red");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 4) {
+                        fill("DIMGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 5) {
+                        fill("DARKSLATEGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 6) {
+                        fill("#690505");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 0) {
+                        fill('#acacac');
+                        rect(j * side, i * side, side, side);
+                    }
+                }
+            }
+        }
+        else if (frameCount % 55 >= 35 && frameCount % 55 < 45) {
+            console.log("winter")
+             for (var i = 0; i < matrix.length; i++) {
+                for (var j = 0; j < matrix[i].length; j++) {
+                    if (matrix[i][j] == 1) {
+                        fill("white");
+                        rect(j * side, i * side, side, side);
+                    } else if (matrix[i][j] == 2) {
+                        fill("orange");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 3) {
+                        fill("red");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 4) {
+                        fill("DIMGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 5) {
+                        fill("DARKSLATEGRAY");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 6) {
+                        fill("#690505");
+                        rect(j * side, i * side, side, side);
+                    }
+                    else if (matrix[i][j] == 0) {
+                        fill('#acacac');
+                        rect(j * side, i * side, side, side);
+                    }
+                }
+            }
+        }
+    }
+
+
 }
