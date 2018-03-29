@@ -4,7 +4,7 @@ class mayrakan {
         this.x = x;
         this.y = y;
         this.multiply = 0;
-        this.energy = 3;
+        this.energy = 10;
 
     }
 
@@ -39,15 +39,17 @@ class mayrakan {
 
 
     eat() {
-       if(this.index == 2){
+        if (this.index == 2) {
             var emptyCord = this.getDirections(1);
-        }else if(this.index == 3){
+        } else if (this.index == 3) {
             var emptyCord = this.getDirections(2)
-        }else if(this.index == 4){
+        } else if (this.index == 5) {
+            var emptyCord = this.getDirections(3)
+        }else if (this.index == 4) {
             var emptyCord = this.getDirections(3)
         }
-       
-        
+
+
 
         var cord = random(emptyCord);
 
@@ -58,24 +60,38 @@ class mayrakan {
             var x = cord[0];
             var y = cord[1];
 
-            matrix[y][x] = 2;
+            matrix[y][x] = this.index;
             matrix[this.y][this.x] = 0;
 
             this.x = x;
             this.y = y;
+        }
 
-
+        if (this.index == 2) {
             for (var i in xotArr) {
                 if (x == xotArr[i].x && y == xotArr[i].y) {
                     xotArr.splice(i, 1);
                 }
             }
-            if (this.multiply == 10) {
-                this.mul()
-                this.multiply = 0;
+        } else if (this.index == 3) {
+            for (var i in eatArr) {
+                if (x == eatArr[i].x && y == eatArr[i].y) {
+                    eatArr.splice(i, 1);
+                }
             }
+        } else if (this.index == 4) {
+            for (var i in gishat3Arr) {
+                if (x == gishat2Arr[i] && y == gishat3Arr[i].y) {
+                    gishat3Arr.splice(i, 1);
+                }
+            }
+        }
+        if (this.multiply == 10) {
+            this.mul()
+            this.multiply = 0;
+        }
 
-        } else {
+        else {
             this.move();
             this.energy--;
             if (this.energy < 3) {
@@ -91,3 +107,4 @@ class mayrakan {
     }
 
 }
+

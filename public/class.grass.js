@@ -3,7 +3,7 @@ class Grass extends mayrakan {
 
     mul() {
         this.multiply++;
-        if (this.multiply == 3) {
+        if (this.multiply == 2) {
             var emptyCord = this.getDirections(0);
 
             var cord = random(emptyCord);
