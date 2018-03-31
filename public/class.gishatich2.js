@@ -32,7 +32,7 @@ class Gishatich2 extends mayrakan {
             var norgishatich2 = new Gishatich2(x, y, this.index);
             gishat2Arr.push(norgishatich2);
 
-            matrix[y][x] = 3;
+            matrix[y][x] = 1;
             this.multiply = 0;
         }
     }

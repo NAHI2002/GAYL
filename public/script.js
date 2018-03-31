@@ -12,6 +12,7 @@ var gishatCount3 = 20;
 var gishatArr = [];
 var gishat2Arr = [];
 var gishat3Arr = [];
+var wheaterContainer = document.getElementById("wheater");
 
 
 
@@ -103,201 +104,191 @@ function setup() {
     }
 
 }
+var hashv = 0;
 
 function draw() {
-
-
-    background('#acacac');
-    for (var i = 0; i < matrix.length; i++) {
-        for (var j = 0; j < matrix[i].length; j++) {
-            if (matrix[i][j] == 1) {
-                fill("green");
-                rect(j * side, i * side, side, side);
-            }
-            else if (matrix[i][j] == 2) {
-                fill("orange");
-                rect(j * side, i * side, side, side);
-            }
-            else if (matrix[i][j] == 0) {
-                fill('#acacac');
-                rect(j * side, i * side, side, side);
-            }
-
-            else if (matrix[i][j] == 3) {
-                fill("yellow");
-                rect(j * side, i * side, side, side);
-            }
-            else if (matrix[i][j] == 4) {
-                fill("red");
-                rect(j * side, i * side, side, side);
-            }
-            else if (matrix[i][j] == 5) {
-                fill("purple");
-                rect(j * side, i * side, side, side);
-            }
-        }
-    }
-
-
-
-    for (var i in xotArr) {
-        xotArr[i].mul();
-    }
-
-    for (var i in eatArr) {
-        eatArr[i].eat();
-    }
-
-    for (var i in gishatArr) {
-        gishatArr[i].eat();
-    }
-
-    for (var i in gishat2Arr) {
-        gishat2Arr[i].eat();
-    }
-    for (var i in gishat3Arr) {
-        gishat3Arr[i].eat();
-    }
-    function weather() {
-        if (frameCount % 55 >= 0 && frameCount % 55 < 15) {
-            console.log("spring")
-
-            for (var i = 0; i < matrix.length; i++) {
-                for (var j = 0; j < matrix[i].length; j++) {
-                    if (matrix[i][j] == 1) {
-                        fill("spring");
-                        rect(j * side, i * side, side, side);
-                    } else if (matrix[i][j] == 2) {
-                        fill("orange");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 3) {
-                        fill("red");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 4) {
-                        fill("DIMGRAY");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 5) {
-                        fill("DARKSLATEGRAY");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 6) {
-                        fill("#690505");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 0) {
-                        fill('#acacac');
-                        rect(j * side, i * side, side, side);
-                    }
-                }
-            }
-        }
-        else if (frameCount % 55 >= 15 && frameCount % 55 < 25) {
-            console.log("summer")
-            for (var i = 0; i < matrix.length; i++) {
-                for (var j = 0; j < matrix[i].length; j++) {
-                    if (matrix[i][j] == 1) {
-                        fill("Chartreuse");
-                        rect(j * side, i * side, side, side);
-                    } else if (matrix[i][j] == 2) {
-                        fill("orange");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 3) {
-                        fill("red");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 4) {
-                        fill("DIMGRAY");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 5) {
-                        fill("DARKSLATEGRAY");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 6) {
-                        fill("#690505");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 0) {
-                        fill('#acacac');
-                        rect(j * side, i * side, side, side);
-                    }
-                }
-            }
-        }
-        else if (frameCount % 55 >= 25 && frameCount % 55 < 35) {
-            console.log("autumn")
-
-            for (var i = 0; i < matrix.length; i++) {
-                for (var j = 0; j < matrix[i].length; j++) {
-                    if (matrix[i][j] == 1) {
-                        fill("DarkGoldenRod");
-                        rect(j * side, i * side, side, side);
-                    } else if (matrix[i][j] == 2) {
-                        fill("orange");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 3) {
-                        fill("red");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 4) {
-                        fill("DIMGRAY");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 5) {
-                        fill("DARKSLATEGRAY");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 6) {
-                        fill("#690505");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 0) {
-                        fill('#acacac');
-                        rect(j * side, i * side, side, side);
-                    }
-                }
-            }
-        }
-        else if (frameCount % 55 >= 35 && frameCount % 55 < 45) {
-            console.log("winter")
-             for (var i = 0; i < matrix.length; i++) {
-                for (var j = 0; j < matrix[i].length; j++) {
-                    if (matrix[i][j] == 1) {
-                        fill("white");
-                        rect(j * side, i * side, side, side);
-                    } else if (matrix[i][j] == 2) {
-                        fill("orange");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 3) {
-                        fill("red");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 4) {
-                        fill("DIMGRAY");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 5) {
-                        fill("DARKSLATEGRAY");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 6) {
-                        fill("#690505");
-                        rect(j * side, i * side, side, side);
-                    }
-                    else if (matrix[i][j] == 0) {
-                        fill('#acacac');
-                        rect(j * side, i * side, side, side);
-                    }
-                }
-            }
-        }
-    }
-
-
+    
+    hashv++;
+   for (var i in xotArr) {
+    xotArr[i].mul();
 }
+
+for (var i in eatArr) {
+    eatArr[i].eat();
+}
+
+for (var i in gishatArr) {
+    gishatArr[i].eat();
+}
+
+for (var i in gishat2Arr) {
+    gishat2Arr[i].eat();
+}
+for (var i in gishat3Arr) {
+    gishat3Arr[i].eat();
+}
+
+
+
+    if (hashv<15) {
+        wheaterContainer.innerHTML = "spring";
+    }
+    else if (hashv<25) {
+        wheaterContainer.innerHTML = "summer";
+    }
+    else if(hashv<35){
+        wheaterContainer.innerHTML = "autumn";
+    }
+    else if(hashv<45){
+         wheaterContainer.innerHTML = "winter";
+    }
+    else{
+        hashv=0;
+    }
+
+
+
+
+
+
+    if (hashv<15) {
+        console.log("spring")
+
+        for (var i = 0; i < matrix.length; i++) {
+            for (var j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] == 1) {
+                    fill("green");
+                    rect(j * side, i * side, side, side);
+                } else if (matrix[i][j] == 2) {
+                    fill("orange");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 3) {
+                    fill("red");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 4) {
+                    fill("DIMGRAY");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 5) {
+                    fill("DARKSLATEGRAY");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 6) {
+                    fill("#D68D81");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 0) {
+                    fill('#acacac');
+                    rect(j * side, i * side, side, side);
+                }
+            }
+        }
+    }
+    else if (hashv<25) {
+        console.log("summer")
+        for (var i = 0; i < matrix.length; i++) {
+            for (var j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] == 1) {
+                    fill("Chartreuse");
+                    rect(j * side, i * side, side, side);
+                } else if (matrix[i][j] == 2) {
+                    fill("orange");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 3) {
+                    fill("red");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 4) {
+                    fill("DIMGRAY");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 5) {
+                    fill("DARKSLATEGRAY");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 6) {
+                    fill("#690505");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 0) {
+                    fill('#acacac');
+                    rect(j * side, i * side, side, side);
+                }
+            }
+        }
+    }
+    else if (hashv<35) {
+        console.log("autumn")
+
+        for (var i = 0; i < matrix.length; i++) {
+            for (var j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] == 1) {
+                    fill("DarkGoldenRod");
+                    rect(j * side, i * side, side, side);
+                } else if (matrix[i][j] == 2) {
+                    fill("orange");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 3) {
+                    fill("red");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 4) {
+                    fill("DIMGRAY");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 5) {
+                    fill("DARKSLATEGRAY");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 6) {
+                    fill("#690505");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 0) {
+                    fill('#acacac');
+                    rect(j * side, i * side, side, side);
+                }
+            }
+        }
+    }
+    else if (hashv<45) {
+        console.log("winter")
+        for (var i = 0; i < matrix.length; i++) {
+            for (var j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] == 1) {
+                    fill("white");
+                    rect(j * side, i * side, side, side);
+                } else if (matrix[i][j] == 2) {
+                    fill("orange");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 3) {
+                    fill("red");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 4) {
+                    fill("DIMGRAY");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 5) {
+                    fill("DARKSLATEGRAY");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 6) {
+                    fill("#690505");
+                    rect(j * side, i * side, side, side);
+                }
+                else if (matrix[i][j] == 0) {
+                    fill('#acacac');
+                    rect(j * side, i * side, side, side);
+                }
+            }
+        }
+    }
+}
+
+
